@@ -18,16 +18,14 @@ console.log(minValue);
 console.log(maxValue);
 
 // Finding average
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+sum = ages.reduce((a,b)=> a + b)
+console.log(sum);
+let avg = sum / ages.length;
+console.log(avg);
 
-function averageAge(ages) {
-    let sum = 0;
-    for (let i = 0; i < ages.length; i++) {
-      sum += ages[i];
-    }
-    return sum / ages.length;
-  }
-  
-  const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
-  let average = averageAge(ages);
-  console.log(average); // Output: 22.9
-  
+// Finding range---- (Max-Min)
+const minAge = Math.min(...ages);
+const maxAge = Math.max(...ages);
+const range = maxAge - minAge;
+console.log(range); // Output: 7
